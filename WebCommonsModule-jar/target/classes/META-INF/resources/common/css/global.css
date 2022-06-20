@@ -1,0 +1,153 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 12, 2016, 11:24:20 AM
+    Author     : admin
+*/
+
+html{
+    overflow:auto !important;
+    height: 768px;
+    width: 100%;
+    margin: 0;
+    padding: 0; 
+}
+
+body{
+    /*background-color: #ffffff; beige */
+    font-family:Arial,"Trebuchet MS",Verdana,sans-serif;
+    font-size:12px;
+    padding:0 !important;
+    margin:0
+}
+
+/* to increase the pi icon size in older themes other than dark/light nova themes */
+body .pi {
+    font-size: 1.25em;
+}
+input,select,textarea,button,.ui-widget,.ui-widget input,.ui-widget select,.ui-widget textarea,.ui-widget button{
+    font-family:Arial,"Trebuchet MS",Verdana,sans-serif;
+    font-size:12px
+}
+
+.ui-widget-header,.ui-widget-content,.ui-widget-header .ui-widget-header,.ui-widget-content .ui-widget-content{
+    font-family:Arial,"Trebuchet MS",Verdana,sans-serif;
+    font-size:12px !important
+}
+
+/*
+.ui-menu .ui-menuitem-link{
+    width:115%
+}
+*/
+.ui-chkbox .ui-chkbox-label{
+    margin:3px
+}
+
+.ui-selectmanycheckbox label{
+    margin-left:1px;
+    margin-top:auto
+}
+
+.ui-selectoneradio label{
+    margin-left:1px
+}
+
+.ui-datatable thead th,.ui-datatable tbody td,.ui-datatable tfoot td{
+    white-space:normal;
+    /*font-size: 12px;*/
+}
+
+.ui-datatable .ui-sortable-column-icon{
+    margin:0 -10px 0 0 !important
+}
+
+/* Rule to fix quirks-mode inheritance behavior */
+table, caption {
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    font-variant: inherit;
+}
+
+table .formColumn1{
+    padding-right:10px;
+    text-align:right;
+    white-space:nowrap;
+    width:1%
+}
+
+table .formColumn2 input{
+    width:200px
+}
+
+table .formColumn input{
+    width:250px
+}
+
+.radioButtons,.radioButtons td{
+    white-space:nowrap;
+    border:none !important
+}
+
+.radioLineDirection td:first-child{
+    padding-right:15px
+}
+
+.radioButtons input{
+    margin:2px 0 2px 0
+}
+
+.radioButtons input,.radioButtons label{
+    vertical-align:middle
+}
+
+.radioButtons label{
+    margin-left:4px
+}
+
+.checkBoxes{
+    white-space:nowrap
+}
+
+.checkBoxes input,.checkBoxes label{
+    vertical-align:middle
+}
+
+table .columnTop{
+    vertical-align:top
+}
+
+.ui-tree .ui-tree-node{
+    cursor:pointer
+}
+
+.ui-tooltip{
+    max-width:400px
+}
+
+.pe-layout-pane-content{
+    padding:0px;
+    overflow:auto;
+}
+
+.ui-layout-north{
+    /*background:0;
+    border:0;
+    color:#000;*/
+    padding:1px;
+    margin: 1px;
+    overflow: hidden;
+}
+
+.ui-widget-header {
+    text-align: center; 
+}
+/* to stop wrapping of menuitems labels */
+ul.ui-menu-child {
+    white-space: nowrap;
+    width: auto !important;
+}

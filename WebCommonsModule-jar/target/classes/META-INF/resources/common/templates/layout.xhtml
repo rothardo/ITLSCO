@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./top.xhtml">
+
+    <ui:define name="pagebody">
+        <style type="text/css">
+            .ui-filter-column .ui-column-customfilter .custom-filter {
+                width: 100%;
+                box-sizing: border-box;
+            }
+            /* this is to fix the issue that growl hides behind the stick datatable header */
+            .ui-growl {
+                z-index: 9999 !important;
+            }
+        </style>
+        
+        <p:growl id="growl" showDetail="true" showSummary="true" globalOnly="false" life="2000" />  
+        
+        <div class="p-grid" style="background: #c2dfef; padding: 0px">
+            <div class="p-col-2  p-m-0 p-p-0">
+                <h2 style="margin: 0px">
+                    <ui:insert name="appTitle">
+                        Web app title here
+                    </ui:insert>
+                </h2>
+            </div>
+            <div class="p-col-8  p-m-0 p-p-0" style="height: 37px" align="center">
+                <ui:insert name="appMenubar">
+                    Web app's menubar here
+                </ui:insert>
+            </div>
+            <div class="p-col-1 p-m-0 p-p-0 " align="right">
+                <h:form>
+                    <p:menubar style="background: none; text-align: left;  display: inline-block; border: none; color: red; margin: 0px; padding: 0px" autoDisplay="false"  >
+                        <p:submenu icon="pi pi-user">
+                            <p:menuitem value="My account" url="#{urlExtractor.rootUrl}user/" />
+                            <p:menuitem value="Sign out" rendered="#{request.userPrincipal != null}" outcome="/signout.xhtml"  ajax="false" />
+                        </p:submenu>
+                    </p:menubar>
+                </h:form>
+            </div>
+            <div class="p-col-1  p-m-0 p-p-0" align="right">
+                <p:graphicImage value="#{logo}" height="37px" width="80px" style="margin: 0px; padding: 0px"/>
+            </div>
+            <div class="p-col-12" align="center" style="background: #036fab; color: aliceblue">
+                <h3 style="margin: 0px; padding: 0px"> 
+                    <ui:insert name="pageTitle">Page Title here</ui:insert> 
+                </h3>
+            </div>
+        </div>
+
+        <div style="margin-top: 10px">
+            <ui:insert name="content">Insert page content here</ui:insert>
+        </div>
+        <ui:include src="globalConfirmation.xhtml"/>
+    </ui:define>
+</ui:composition>
+

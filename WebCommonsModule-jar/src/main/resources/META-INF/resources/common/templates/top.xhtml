@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    
+    <!-- this very top level template is used by layout template and dialog pages -->
+    
+    <f:view >
+        <h:head>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+            <title>
+                <ui:insert name="title">
+                    Title here - appears in the browser's tab OR dialog's heading
+                </ui:insert>
+            </title>
+
+            <h:outputStylesheet library="common" name="css/primeflex/primeflex.css"/>
+            <h:outputScript library="common" name="js/jsfcrud.js"/>
+            
+        </h:head>
+        <h:body>
+            <ui:insert name="pagebody">
+                page body contents here
+            </ui:insert>
+        </h:body>
+    </f:view>
+</html>
+
